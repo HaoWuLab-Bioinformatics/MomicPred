@@ -1,11 +1,11 @@
-# CTPredictor
+# MomicPred
 
-A comprehensive and robust framework for predicting cell types by integrating multi-omic features from single-cell Hi-C data 
+MomicPred: A cell cycle prediction framework based on dual-branch multi-modal feature fusion for single-cell multi-omics data
 
 ## Framework
-![image](Figure/framework.jpg)
+![image](hic-rna架构-1.jpg)
 
-(A) Data preparation. The input scHi-C dataset undergoes transformation into matrices. Our model generates sparse chromosome contact matrices for each cell from interaction pairs files in scHi-C data and simultaneously produces enhanced matrices through spatial smoothing. (B) Feature extraction. In this study, we extract small intra-domain contact probability (SICP) from the sparse matrices, smoothed small intra-domain contact probability (SSICP), and smoothed bin contact probability (SBCP) from the enhanced matrices. (C) Feature fusion. To amalgamate feature information from diverse perspectives, we introduce a fusion module. This module employs two convolutional blocks to extract more intricate and crucial features. (D) Cell classification. The fusion features are then employed to accurately predict cell types.
+ a Multi-modal feature extraction. MomicPred extracts distinct features from multi-omics data. Specifically, we extract three feature sets: random TAD-like contact probability (RLDCP) feature set, high expression gene (HEG) feature set, and cell-level macroscopic information (CLMI) feature set. b Dual-branch multi-modal feature fusion model. We develop a dual-branch multi-modal feature fusion model to deeply explore complementary information among features, thereby enhancing the accuracy and robustness of cell cycle prediction. c The usage of MomicPred. Directly apply the trained model to predict cell cycles based on multi-omics data.
 
 ## Overview
 
@@ -31,7 +31,7 @@ The file "final_sicp_ssicp_sbcp.py" is the code of model.
 The file "focal_loss,py" is the code of loss function.  
 
 ## Dependency
-Python 3.6    
+Python 3.9    
 pytorch  
 xlsxwriter  
 sklearn  
