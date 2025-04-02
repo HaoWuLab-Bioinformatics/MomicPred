@@ -31,7 +31,7 @@ MomicPred: A cell cycle prediction framework based on dual-branch multi-modal fe
 8. SICP : This folder holds the construction of a predictive model using the SICP feature set alone.
 
 ## Dependency
-Mainly used libraries: 
+Mainly used libraries:   
 Python 3.9    
 pytorch  
 xlsxwriter  
