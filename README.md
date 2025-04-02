@@ -14,21 +14,23 @@ MomicPred: A cell cycle prediction framework based on dual-branch multi-modal fe
 
 ## Overview
 
-1. BCP : This folder holds the construction of a predictive model using the BCP feature set alone.
+1. HEG_model : This folder holds the construction of a predictive model using the HEG feature set alone.
 
-2. CDD : This folder holds the construction of a predictive model using the CDD feature set alone.
+2. RLDCP_model : This folder holds the construction of a predictive model using the RLDCP feature set alone.
 
-3. Construct_fusion_model : This folder holds the construction of a fusion prediction model for the three feature sets.
+3. best_para : It is a fusion prediction model based on RLDCP, CLMI, and HEG feature sets.
 
-4. Data : This folder holds the CDD, BCP and SICP feature sets generated in the Feature_sets_extraction phase.
+4. Dataset : This folder holds feature sets generated in the hic_feature and rna_feature folders.
 
 5. Data_Preparation :  This folder holds the code for Data_preparation.
 
-6. Feature_sets_extraction :  This folder holds the code to perform feature-set extraction.
+6. RLDCP+HEG_model : This folder holds the construction of a predictive model using the RLDCP and HEG feature sets.
 
-7. Raw_Data : This folder contains the raw data used in this study.
+7. only_hic_model : This folder holds the construction of a predictive model using the RLDCP and CLMI feature sets.
 
-8. SICP : This folder holds the construction of a predictive model using the SICP feature set alone.
+8. hic_feature :  This folder holds the code about the extraction of RLDCP and CLMI.
+
+9. rna_feature :  This folder holds the code about the extraction of HEG.
 
 ## Dependency
 Mainly used libraries:   
@@ -42,9 +44,8 @@ scipy
 
 ## Usage
 Perform the following steps in each folder named after the dataset:  
-First, you should extract features of data, you can run the script to extract smoothed bin contact probabilit (SBCP), small intra-domain contact probability (SICP), and smoothed small intra-domain contact probability (SSICP) features as follows:  
-`python ./generate_features/generate_feature_sicp.py`  
-`python ./generate_features/generate_feature_ssicp.py`  
-`python ./generate_features/generate_feature_sbcp.py`    
-Then run the script as follows to compile and run CTPredictor:  
-`python ./model/final_sicp_ssicp_sbcp.py`     
+First, you should extract features of data, you can run the script to extract random TAD-like contact probability (RLDCP) feature set and high expression gene (HEG) feature set  as follows:  
+`python ./hic_feature/extract_hic_features.py`  
+`python ./rna_feature/extract_TopGene.py`  
+Then run the script as follows to compile and run MomicPred:  
+`python best_para.py`     
