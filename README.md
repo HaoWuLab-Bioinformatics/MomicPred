@@ -5,7 +5,7 @@ MomicPred: A cell cycle prediction framework based on dual-branch multi-modal fe
 ## Framework
 ![image](framework.jpg)
 
- a Multi-modal feature extraction. MomicPred extracts distinct features from multi-omics data. Specifically, we extract three feature sets: random TAD-like contact probability (RLDCP) feature set, high expression gene (HEG) feature set, and cell-level macroscopic information (CLMI) feature set. b Dual-branch multi-modal feature fusion model. We develop a dual-branch multi-modal feature fusion model to deeply explore complementary information among features, thereby enhancing the accuracy and robustness of cell cycle prediction. c The usage of MomicPred. Directly apply the trained model to predict cell cycles based on multi-omics data.
+**a** Multi-modal feature extraction. MomicPred extracts distinct features from multi-omics data. Specifically, we extract three feature sets: random TAD-like contact probability (RLDCP) feature set, high expression gene (HEG) feature set, and cell-level macroscopic information (CLMI) feature set. **b** Dual-branch multi-modal feature fusion model. We develop a dual-branch multi-modal feature fusion model to deeply explore complementary information among features, thereby enhancing the accuracy and robustness of cell cycle prediction. **c** The usage of MomicPred. Directly apply the trained model to predict cell cycles based on multi-omics data.
 
 ## Overview
 
